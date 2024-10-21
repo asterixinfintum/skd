@@ -1,0 +1,177 @@
+.userheader {
+    display: flex;
+    justify-content: space-between;
+    background: $font-white;
+    color: rgba($font-black, .5);
+    padding: #{scaleValue(30)} #{scaleValue(50)};
+    z-index: 3000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    @media only screen and (max-width: 768px) {
+        height: #{scaleValue(400)};
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.17);
+    }
+
+
+    @media only screen and (max-width: 480px) {
+        height: #{scaleValue(400)};
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.17);
+    }
+
+    &__logoarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & figure {
+            height: #{scaleValue(50)};
+            width: #{scaleValue(50)};
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: 768px) {
+                height: #{scaleValue(140)};
+                width: #{scaleValue(140)};
+            }
+
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 768px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: #{scaleValue(1000)};
+
+            display: flex;
+            flex-direction: column;
+            background: $background;
+            align-items: flex-start;
+            padding: #{scaleValue(100)};
+            justify-content: flex-start;
+
+            transform: translateX(#{scaleValue(-1000)});
+            transition: all .4s ease;
+
+            z-index: 2000;
+        }
+
+        &.sidenavopen {
+
+            @media only screen and (max-width: 768px) {
+                transform: translateX(0)
+            }
+        }
+
+
+        @media only screen and (max-width: 480px) {}
+    }
+
+    &__confirmemail {
+        padding:  #{scaleValue(20)} #{scaleValue(70)};
+        background: $offer-green;
+        text-align: center;
+        font-size: #{scaleValue(15)};
+        line-height: #{scaleValue(20)};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 768px) {
+            font-size: #{scaleValue(60)};
+            transform: translateY(#{scaleValue(300)});
+            line-height: #{scaleValue(80)};
+            text-align: left;
+        }
+    }
+
+    &__menuitem {
+        font-size: #{scaleValue(15)};
+        margin: 0 #{scaleValue(15)};
+        cursor: pointer;
+        padding: #{scaleValue(7)};
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            font-size: #{scaleValue(70)};
+            margin-bottom: #{scaleValue(130)};
+        }
+
+        & span {
+
+            @media only screen and (max-width: 768px) {
+                display: inline-block;
+                margin-right: #{scaleValue(70)};
+                transform: translateY(#{scaleValue(7)});
+            }
+
+            & svg {
+                fill: rgba($font-black, .5);
+                height: #{scaleValue(15)};
+                width: #{scaleValue(15)};
+
+                @media only screen and (max-width: 768px) {
+                    height: #{scaleValue(70)};
+                    width: #{scaleValue(70)};
+                }
+            }
+        }
+    }
+
+    &__userarea {
+        display: flex;
+        align-items: center;
+
+        & span {
+            display: flex;
+            align-items: center;
+            border-radius: 100%;
+            justify-content: center;
+            border: 1px solid $primary-orange;
+            height: #{scaleValue(40)};
+            width: #{scaleValue(40)};
+
+            @media only screen and (max-width: 768px) {
+                height: #{scaleValue(140)};
+                width: #{scaleValue(140)};
+                margin-left: #{scaleValue(100)} !important;
+            }
+
+            & svg {
+                fill: $primary-orange;
+                height: #{scaleValue(15)};
+                width: #{scaleValue(15)};
+
+                @media only screen and (max-width: 768px) {
+                    height: #{scaleValue(70)};
+                    width: #{scaleValue(70)};
+                }
+            }
+        }
+
+        & label {
+            color: $primary-orange;
+            font-size: #{scaleValue(15)};
+            margin-left: #{scaleValue(15)};
+            font-weight: 500;
+        }
+    }
+}

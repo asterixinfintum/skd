@@ -1,0 +1,32 @@
+.announcement {
+    background-color: $announcement-green;
+    text-align: center;
+    padding: #{scaleValue(20)} 0;
+
+    @media only screen and (max-width: 414px) {
+        padding: #{scaleValue(50)};
+        line-height: #{scaleValue(160)};
+    }
+
+    &.landing-announcement {
+        margin-top: #{scaleValue(75)};
+
+        @media only screen and (max-width: 414px) {
+            margin-top:  #{scaleValue(400)};
+        }
+    }
+
+    & h2 {
+        color: $deep-blue;
+        font-size: #{scaleValue(17)};
+        font-weight: 500;
+
+        @media only screen and (max-width: 414px) {
+            font-size: #{scaleValue(90)};
+
+            & a {
+                font-size: #{scaleValue(90)};
+            }
+        }
+    }
+}

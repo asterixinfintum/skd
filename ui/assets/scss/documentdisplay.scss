@@ -1,0 +1,31 @@
+.documentdisplay {
+    position: fixed;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10rem;
+    padding-top: 3rem;
+  
+    width: 100vw;
+    height: 100vh;
+  
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  
+    display: flex;
+    justify-content: center;
+  
+    &__body {
+      background: #fff;
+  
+      min-height: #{scaleValue(100)};
+      width: #{scaleValue(900)};
+  
+      &--opendoc {
+        color: $primary-orange;
+        padding: #{scaleValue(20)};
+        margin-bottom: #{scaleValue(20)};
+        cursor: pointer;
+      }
+    }
+  }

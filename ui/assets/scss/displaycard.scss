@@ -1,0 +1,600 @@
+.displaycard {
+    border-radius: #{scaleValue(20)};
+    padding: #{scaleValue(40)};
+    position: relative;
+    margin-bottom: #{scaleValue(30)};
+
+    &.loan {
+        background: $offer-pink;
+    }
+
+    &.investment {
+        background: $star-green;
+    }
+
+    &.savings {
+        background: rgba($primary-orange, 1);
+    }
+
+    &__wrapper {
+        background: $background;
+        padding: #{scaleValue(30)};
+        border-radius: #{scaleValue(20)};
+    }
+
+    &__content {
+        background: $font-white;
+        padding: #{scaleValue(10)};
+        border-radius: #{scaleValue(25)};
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        display: flex;
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: #{scaleValue(120)} #{scaleValue(60)} !important;
+        }
+    }
+
+    &__base {
+
+        &--figure {
+            height: #{scaleValue(150)};
+            width: #{scaleValue(150)};
+            border-radius: #{scaleValue(25)};
+            overflow: hidden;
+            position: relative;
+
+            @media only screen and (max-width: 768px) {
+                height: #{scaleValue(700)};
+                width: #{scaleValue(700)};
+            }
+
+            &::before {
+                content: '';
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba($font-black, .7);
+                z-index: 2;
+            }
+
+            & img {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                z-index: 1;
+            }
+        }
+
+        &--itemlogo {
+            position: absolute;
+            top: #{scaleValue(10)};
+            left: #{scaleValue(10)};
+            padding: #{scaleValue(10)};
+            background: rgba($font-black, .7);
+            border-radius: #{scaleValue(10)};
+            z-index: 2;
+
+            & svg {
+                fill: $star-green;
+                height: #{scaleValue(20)};
+                width: #{scaleValue(20)};
+            }
+        }
+
+        &--phototext {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            bottom: #{scaleValue(15)};
+            left: #{scaleValue(10)};
+            padding: #{scaleValue(10)};
+            color: $font-white;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+
+            & label {
+                font-size: #{scaleValue(13)};
+                font-weight: 400;
+                margin-bottom: #{scaleValue(8)};
+
+                @media only screen and (max-width: 768px) {
+                    font-size: #{scaleValue(60)};
+                }
+            }
+
+            & span {
+                font-size: #{scaleValue(15)};
+                font-weight: 500;
+
+                @media only screen and (max-width: 768px) {
+                    font-size: #{scaleValue(50)};
+                }
+            }
+        }
+    }
+
+    &__balance {
+        margin-top: #{scaleValue(25)};
+
+        @media only screen and (max-width: 768px) {
+            margin-bottom: #{scaleValue(100)};
+        }
+
+        & span {
+
+            &.balancelabel {
+                font-size: #{scaleValue(12)};
+                color: rgba($font-black, .5);
+
+                @media only screen and (max-width: 768px) {
+                    font-size: #{scaleValue(65)};
+                }
+            }
+
+            &.balance {
+                color: $star-green;
+                font-size: #{scaleValue(15)};
+
+                @media only screen and (max-width: 768px) {
+                    font-size: #{scaleValue(70)};
+                }
+            }
+        }
+    }
+
+    &__rightbase {
+        padding-bottom: #{scaleValue(80)};
+
+        @media only screen and (max-width: 768px) {
+            margin-top: #{scaleValue(60)};
+        }
+
+        &--p {
+            font-size: #{scaleValue(13)};
+            line-height: #{scaleValue(17)};
+            padding: #{scaleValue(13)};
+
+            min-height: #{scaleValue(150)};
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(55)};
+                line-height: #{scaleValue(85)};
+            }
+        }
+
+        &--btnsvg {
+            display: flex;
+            align-items: center;
+            border-radius: 100%;
+            height: #{scaleValue(20)};
+            width: #{scaleValue(20)};
+            justify-content: center;
+            background: $font-white;
+            margin-right: #{scaleValue(10)};
+
+            & svg {
+                height: #{scaleValue(15)};
+                width: #{scaleValue(15)};
+                fill: $button-blue;
+
+                @media only screen and (max-width: 768px) {
+                    height: #{scaleValue(100)} !important;
+                    width: #{scaleValue(100)} !important;
+                }
+            }
+        }
+
+        &--btn {
+            position: absolute;
+            bottom: #{scaleValue(10)};
+            right: #{scaleValue(10)};
+            cursor: pointer;
+            font-size: #{scaleValue(13)};
+            padding: #{scaleValue(5)};
+            border: none;
+            outline: none;
+            border-radius: 3rem;
+            background: $button-blue;
+            color: $font-white;
+
+            display: flex;
+            align-items: center;
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(50)};
+                padding: #{scaleValue(30)};
+                bottom: #{scaleValue(60)};
+                right: #{scaleValue(60)};
+            }
+        }
+    }
+
+    &__detail {
+        position: absolute;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: #{scaleValue(35)};
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            line-height: #{scaleValue(100)};
+        }
+
+        &--logo {
+            height: #{scaleValue(25)};
+            width: #{scaleValue(25)};
+
+            @media only screen and (max-width: 768px) {
+                height: #{scaleValue(60)};
+                width: #{scaleValue(60)};
+            }
+
+            & img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &__name {
+        font-size: #{scaleValue(13)};
+        margin-left: #{scaleValue(10)};
+        border-radius: 3rem;
+        padding: #{scaleValue(8)} #{scaleValue(10)};
+        color: $button-blue;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $grey-background;
+        text-transform: capitalize;
+
+        @media only screen and (max-width: 768px) {
+            font-size: #{scaleValue(70)};
+        }
+    }
+
+    &__interest {
+        margin-left: #{scaleValue(10)};
+        font-size: #{scaleValue(10)};
+        font-weight: 500;
+
+        @media only screen and (max-width: 768px) {
+            font-size: #{scaleValue(50)};
+        }
+    }
+
+    &__applyform {
+        position: fixed;
+        top: #{scaleValue(120)};
+        right: #{scaleValue(400)};
+        width: #{scaleValue(400)};
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        border-radius: #{scaleValue(20)};
+        padding: #{scaleValue(20)};
+        background: $offer-pink;
+
+        @media only screen and (max-width: 768px) {
+            width: #{scaleValue(1600)};
+            right: 0;
+            padding: #{scaleValue(60)};
+        }
+
+        &.investment {
+            background: $star-green;
+        }
+
+        &.savings {
+            background: rgba($primary-orange, 1);
+            height: #{scaleValue(600)};
+            transform: scale(.9) translateY(#{scaleValue(-40)});
+
+            @media only screen and (max-width: 768px) {
+                height: auto;
+            }
+
+        }
+
+        &--header {
+            font-size: #{scaleValue(17)} !important;
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(80)} !important;
+                margin-bottom: #{scaleValue(70)}
+            }
+        }
+    }
+
+    &__formbody {
+        background: $font-white;
+        border-radius: #{scaleValue(20)};
+        padding: #{scaleValue(20)};
+
+        @media only screen and (max-width: 768px) {
+            padding: #{scaleValue(100)};
+            padding-top: #{scaleValue(200)};
+        }
+    }
+
+    &__rangeinput {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: #{scaleValue(3)};
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+
+        @media only screen and (max-width: 768px) {
+            height: #{scaleValue(30)};
+            margin-bottom: #{scaleValue(120)};
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: #{scaleValue(20)};
+            height: #{scaleValue(20)};
+            border-radius: 100%;
+            background: $button-blue;
+            cursor: pointer;
+
+            @media only screen and (max-width: 768px) {
+                width: #{scaleValue(80)};
+                height: #{scaleValue(80)};
+            }
+        }
+    }
+
+    &__amounts {
+        margin: #{scaleValue(20)} 0;
+    }
+
+    &__amount {
+        display: flex;
+        flex-direction: column;
+        margin: #{scaleValue(20)} 0;
+        position: relative;
+
+        @media only screen and (max-width: 768px) {
+            line-height: #{scaleValue(100)};
+        }
+
+        & label {
+            display: inline-block;
+            margin-bottom: #{scaleValue(10)};
+            color: rgba($font-black, .8);
+            font-size: #{scaleValue(12)};
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(60)};
+            }
+        }
+
+        & p {
+            color: $button-blue;
+            font-weight: 500;
+            font-size: #{scaleValue(17)};
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(60)};
+            }
+        }
+
+        &--maximum {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: rgba($font-black, .7);
+            font-weight: 500;
+            font-size: #{scaleValue(20)};
+
+            & span {
+
+                &.label {
+                    font-size: #{scaleValue(12)};
+                    color: rgba($font-black, .5);
+
+                    @media only screen and (max-width: 768px) {
+                        font-size: #{scaleValue(60)};
+                    }
+                }
+
+                &.key {
+                    font-size: #{scaleValue(12)};
+
+                    @media only screen and (max-width: 768px) {
+                        font-size: #{scaleValue(60)};
+                    }
+                }
+            }
+        }
+    }
+
+    &__minbalance {
+        padding: #{scaleValue(12)} #{scaleValue(8)};
+        border-radius: 3rem;
+        margin-top: #{scaleValue(15)};
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--label {
+            font-size: #{scaleValue(13)};
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(60)};
+            }
+        }
+
+        &--balance {
+            font-size: #{scaleValue(14)};
+            background: $offer-green;
+            padding: #{scaleValue(6)} #{scaleValue(15)};
+            display: inline-block;
+            border-radius: #{scaleValue(6)};
+            margin-top: #{scaleValue(15)};
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(40)};
+            }
+        }
+    }
+
+    &__term {
+
+        &--content {
+            font-weight: 600;
+        }
+
+        &--unit {
+            margin-top: #{scaleValue(15)};
+            display: inline-block;
+        }
+    }
+
+    &__userlistcard {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: #{scaleValue(30)};
+        border-radius: #{scaleValue(10)};
+        background: $font-white;
+        margin-bottom: #{scaleValue(30)};
+    }
+
+    &__review {
+        width: #{scaleValue(400)};
+
+        @media only screen and (max-width: 768px) {
+            width: #{scaleValue(1500)} !important;
+            padding: #{scaleValue(50)} !important;
+        }
+
+        &--header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--headerleft {
+            display: flex;
+            align-items: center;
+        }
+
+        &--logo {
+            height: #{scaleValue(15)};
+            width: #{scaleValue(15)};
+
+            @media only screen and (max-width: 768px) {
+                height: #{scaleValue(100)};
+                width: #{scaleValue(100)};
+            }
+
+            & img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &--now {
+            font-size: #{scaleValue(15)};
+            margin-left: #{scaleValue(12)};
+            font-weight: 500;
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(60)};
+            }
+        }
+
+        &--headerright {
+            display: flex;
+            align-items: center;
+        }
+
+        &--svgupback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            height: #{scaleValue(30)};
+            width: #{scaleValue(30)};
+            background: $background;
+            cursor: pointer;
+
+            @media only screen and (max-width: 768px) {
+                height: #{scaleValue(120)};
+                width: #{scaleValue(120)};
+            }
+
+            & svg {
+                height: #{scaleValue(20)};
+                width: #{scaleValue(20)};
+                fill: rgba($font-black, .5);
+
+                @media only screen and (max-width: 768px) {
+                    height: #{scaleValue(100)};
+                    width: #{scaleValue(100)};
+                }
+            }
+        }
+
+        &--content {
+            font-size: #{scaleValue(14)};
+            line-height: #{scaleValue(23)};
+            margin-top: #{scaleValue(23)};
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(60)};
+                line-height: #{scaleValue(120)};
+                margin-top: #{scaleValue(100)};
+                margin-bottom: #{scaleValue(100)};
+            }
+        }
+
+        &--itemlogo {
+
+            & svg {
+                height: #{scaleValue(20)};
+                width: #{scaleValue(20)};
+                fill: rgba($star-green, .5);
+            }
+        }
+
+        &--bottom {
+            margin-top: #{scaleValue(40)};
+        }
+
+        &--btn {
+            font-size: #{scaleValue(13)};
+
+            @media only screen and (max-width: 768px) {
+                font-size: #{scaleValue(50)};
+            }
+        }
+    }
+
+    &__status {
+        background: $grey-background;
+        font-size: #{scaleValue(13)};
+        font-weight: 600;
+        padding: #{scaleValue(8)};
+        border-radius: #{scaleValue(13)};
+    }
+}

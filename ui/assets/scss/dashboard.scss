@@ -1,0 +1,179 @@
+.dashboard {
+
+    &__header {}
+
+    &__content {
+        padding: #{scaleValue(50)};
+        padding-bottom: 20rem;
+    }
+
+    &__list {
+
+        &--pagination {
+            padding: #{scaleValue(20)} 0;
+            display: flex;
+            
+            &.wrap {
+                flex-wrap: wrap;
+            }
+
+            & span {
+                font-size: #{scaleValue(13)};
+                border: 1px solid rgba($font-black, .8);
+                cursor: pointer;
+                padding: #{scaleValue(6)} #{scaleValue(8)};
+                display: inline-block;
+                margin-right: #{scaleValue(13)};
+
+                &.current {
+                    background: $primary-orange;
+                    color: #f2f8f3 !important;
+                }
+
+                &.paginator {
+                    margin-bottom: #{scaleValue(20)}
+                }
+            }
+        }
+    }
+
+    &__listitem {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr;
+        border-bottom: 1px solid rgba($font-black, .3);
+        font-size: #{scaleValue(13)};
+
+        &--headerarea {
+            border-top: 1px solid rgba($font-black, .3);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+
+        &--item {
+            transition: all .5s ease;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba($font-black, .1);
+            }
+        }
+
+        &--subject {
+            border-right: 1px solid rgba($font-black, .3);
+            padding: #{scaleValue(10)};
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+                border-left: 1px solid rgba($font-black, .3);
+            }
+
+            &.spantwo {
+                grid-column: span 2;
+            }
+
+            &.btns {
+                display: flex;
+
+
+                & span {
+                    cursor: pointer;
+                    padding:  #{scaleValue(10)};
+                    background: rgba($font-black, .1);
+                    border-radius: #{scaleValue(6)};
+                    margin-right: #{scaleValue(6)};
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.edit {
+
+                        & svg {
+                            fill: rgba($star-green, .7)
+                        }
+                    }
+
+                    &.delete {
+
+                        & svg {
+                            fill: rgba($error-color, .5)
+                        }
+                    }
+                }
+
+                & svg {
+                    height: #{scaleValue(14)};
+                    width: #{scaleValue(14)};
+                    fill: rgba($font-black, .3)
+                }
+            }
+        }
+    }
+
+    &__search {
+        margin-top: #{scaleValue(20)};
+        display: flex;
+        justify-content: center;
+
+        &--input {
+
+            & input {
+                border: 1px solid rgba($font-black, .3);
+                padding: #{scaleValue(15)};
+                outline: none;
+                border-radius: #{scaleValue(10)};
+                width: #{scaleValue(800)};
+                transition: all .5s ease;
+                font-size: #{scaleValue(15)};
+
+                &:focus {
+                    border: 1px solid rgba($darker-blue, .3);
+                }
+            }
+        }
+    }
+
+
+    &__userdetailarea {
+        display: grid;
+        margin-bottom: #{scaleValue(30)};
+        grid-gap: #{scaleValue(20)};
+        grid-template-columns: repeat(20, 1fr);
+    }
+
+    &__userdetail {
+        border: 1px solid rgba($font-black, .1);
+        padding: #{scaleValue(15)};
+        outline: none;
+        border-radius: #{scaleValue(10)};
+        grid-column: span 10;
+
+        display: flex;
+        flex-direction: column;
+
+        & label {
+            text-transform: capitalize;
+            margin-bottom: #{scaleValue(10)};
+        }
+    }
+
+    &__usersub {
+
+    }
+
+    &__usersubbtns {
+
+        &--btn {
+            font-size: #{scaleValue(12)};
+            padding: #{scaleValue(10)} #{scaleValue(13)};
+            margin-right: #{scaleValue(13)};
+        }
+    }
+
+    &__profileeditbtn {
+        width: #{scaleValue(150)} !important;
+        border-radius: 3rem;
+    }
+}

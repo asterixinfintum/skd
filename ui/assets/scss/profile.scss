@@ -1,0 +1,27 @@
+.profile {
+    width: #{scaleValue(1000)};
+
+    &__area {
+        background: rgba($primary-orange, .08);
+        padding: #{scaleValue(30)};
+        border-radius: 1rem;
+        margin-top: #{scaleValue(20)};
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba($font-black, .5);
+        padding-bottom: #{scaleValue(15)};
+        margin-bottom: #{scaleValue(30)};
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--label {
+            display: inline-block;
+            margin-bottom: #{scaleValue(10)};
+        }
+    }
+}

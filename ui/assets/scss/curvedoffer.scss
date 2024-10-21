@@ -1,0 +1,284 @@
+.curvedoffer {
+    padding: #{scaleValue(30)};
+    background: $font-white;
+    padding-bottom: 0;
+
+    &__reviews {
+
+        width: 100%;
+
+        & img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__reviewsgrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: #{scaleValue(10)};
+
+        @media only screen and (max-width: 414px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 0;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__brands {
+        width: 100%;
+        padding: #{scaleValue(50)};
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($darker-blue, .003);
+            z-index: 1;
+            border-radius: 3rem;
+        }
+    }
+
+    &__brandsgrid {
+        margin-top: #{scaleValue(50)};
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: #{scaleValue(100)};
+
+        @media only screen and (max-width: 414px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 0;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__brand {
+        position: relative;
+        height: #{scaleValue(170)};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        margin-top: #{scaleValue(170)};
+
+        @media only screen and (max-width: 414px) {
+            height: auto;
+        }
+
+        & img {
+            object-fit: contain;
+            height: 70%;
+            width: 70%;
+        }
+
+        & svg {
+            height: 70%;
+            width: 70%;
+        }
+    }
+
+    &__body {
+        border-radius: 3rem;
+        display: flex;
+        justify-content: space-between;
+        padding: $section-padding;
+        padding-bottom: 0;
+        padding-top: #{scaleValue(30)};
+
+        position: relative;
+
+        @media only screen and (max-width: 414px) {
+            flex-direction: column;
+            align-items: center;
+
+            padding: #{scaleValue(300)} #{scaleValue(80)};
+        }
+
+        &.one {
+            background: $offer-green;
+        }
+
+        &.three {
+            background: $offer-pink;
+        }
+
+        &.reverseflex {
+            flex-direction: row-reverse;
+
+            @media only screen and (max-width: 414px) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &.transparent {
+            background: none;
+        }
+
+        &.four {
+            background: $offer-linear-one;
+        }
+
+        &.five {
+            background: $offer-linear-two;
+        }
+
+        &.six {
+            background: $deep-blue;
+        }
+
+        &.top-margin {
+            margin-top: #{scaleValue(140)};
+        }
+    }
+
+    &__image {
+        flex-shrink: 0;
+
+        &.translateup {
+            transform: translateY(#{scaleValue(-90)});
+        }
+
+        &--fig {
+            width: #{scaleValue(500)};
+            height: #{scaleValue(600)};
+
+            @media only screen and (max-width: 414px) {
+                width: #{scaleValue(1400)};
+                height: #{scaleValue(1400)};
+            }
+
+            & img {
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &__copy {
+        width: #{scaleValue(600)};
+        flex-shrink: 0;
+        color: $font-black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media only screen and (max-width: 414px) {
+            width: 100%;
+            margin-top: #{scaleValue(150)};
+        }
+
+        &.no-flex {
+            width: #{scaleValue(1000)};
+        }
+
+        &--h3 {
+            font-size: #{scaleValue(40)};
+            margin-bottom: #{scaleValue(21)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(150)};
+                margin-bottom: #{scaleValue(120)};
+            }
+        }
+
+        &--h4 {
+            font-size: #{scaleValue(22)};
+            margin-bottom: #{scaleValue(21)};
+            font-weight: 400;
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(100)};
+            }
+        }
+
+        &--label {
+            background: $background;
+            padding: #{scaleValue(10)};
+            width: #{scaleValue(220)};
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: #{scaleValue(10)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(70)};
+                width: #{scaleValue(1000)};
+                margin-bottom: #{scaleValue(40)};
+            }
+        }
+
+        &--content {
+            font-size: #{scaleValue(20)};
+            font-weight: 400;
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(80)};
+                line-height: #{scaleValue(120)};
+            }
+
+            & p {
+                margin-bottom: #{scaleValue(30)};
+
+                @media only screen and (max-width: 414px) {
+                    margin-bottom: #{scaleValue(200)};
+                }
+
+                &:last-child {
+                    margin-bottom: #{scaleValue(30)};
+
+                    @media only screen and (max-width: 414px) {
+                        margin-bottom: #{scaleValue(200)};
+                    }
+                }
+
+                &.top-margin {
+                    margin-top: #{scaleValue(30)};
+
+                    @media only screen and (max-width: 414px) {
+                        margin-top: #{scaleValue(200)};
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__quality {
+        color: $font-black;
+        padding-bottom: #{scaleValue(140)};
+
+        & h3 {
+            font-size: #{scaleValue(30)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(100)};
+            }
+        }
+
+        & figure {
+            width: #{scaleValue(600)};
+            height: #{scaleValue(600)};
+            border-radius: 3rem;
+            border: 1px solid $primary-orange;
+            overflow: hidden;
+
+            @media only screen and (max-width: 414px) {
+                width: #{scaleValue(1500)};
+                height: #{scaleValue(1500)};
+            }
+
+            & img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

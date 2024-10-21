@@ -1,0 +1,121 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+
+    &__top {
+        background: $deep-blue;
+        padding: 0 $side-padding;
+        height: #{scaleValue(75)};
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: 414px) {
+            height: #{scaleValue(400)};
+        }
+    }
+
+    &__name {
+
+        & h1 {
+            //text-transform: lowercase;
+            font-weight: 500;
+            font-size: #{scaleValue(25)};
+            letter-spacing: #{scaleValue(1)};
+            cursor: pointer;
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(150)};
+            }
+        }
+    }
+
+    &__side {
+
+        &.menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media only screen and (max-width: 414px) {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: #{scaleValue(1400)};
+                background: $darker-blue;
+
+                flex-direction: column;
+                padding: #{scaleValue(70)};
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-top: #{scaleValue(500)};
+
+                transform: translateX(100%);
+
+                &.sidenavopen {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    &__menuitem {
+        font-size: #{scaleValue(17.5)};
+        font-weight: 500;
+        margin-left: #{scaleValue(70)};
+        cursor: pointer;
+        transition: $transition;
+
+        @media only screen and (max-width: 414px) {
+            font-size: #{scaleValue(80.5)};
+            margin-bottom: #{scaleValue(90)};
+
+            &.last-child {
+                margin-top: #{scaleValue(300)};
+
+                & button {
+                    width: #{scaleValue(1100)};
+                }
+            }
+        }
+
+        &:hover {
+            color: $hover-text-color;
+        }
+    }
+
+    &__mobilemenu {
+        display: none;
+
+        @media only screen and (max-width: 414px) {
+            position: absolute;
+            display: flex;
+
+            width: 100%;
+            justify-content: space-between;
+            padding: #{scaleValue(90)};
+            top: #{scaleValue(90)};
+            left: 0;
+
+            &--logo {
+                color: $primary-orange;
+                font-size: #{scaleValue(70)};
+            }
+        }
+    }
+
+    &__mobilemenubtn {
+        display: none;
+
+        @media only screen and (max-width: 414px) {
+            display: flex;
+            align-items: center;
+            font-size: #{scaleValue(70)};
+            font-weight: 500;
+        }
+    }
+}

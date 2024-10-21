@@ -1,0 +1,94 @@
+.landing {
+
+    &__join {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        padding: $section-padding;
+
+        @media only screen and (max-width: 414px) {
+            padding: #{scaleValue(350)}  #{scaleValue(80)}
+        }
+
+        &--cards {
+
+            & figure {
+                width: #{scaleValue(150)};
+                height: #{scaleValue(120)};
+                margin: 0 #{scaleValue(20)};
+
+                @media only screen and (max-width: 414px) {
+                    width: #{scaleValue(350)};
+                    height: #{scaleValue(320)};
+                }
+
+                & img {
+                    object-fit: contain;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        &--trust {
+            color: $font-black;
+            align-items: center;
+
+            @media only screen and (max-width: 414px) {
+                display: flex;
+                flex-direction: column;;
+            }
+
+            & div {
+                margin: 0 #{scaleValue(5)};
+
+                @media only screen and (max-width: 414px) {
+                    font-size: #{scaleValue(60)};
+                }
+            }
+        }
+
+        &--starssvg {
+            position: relative;
+            width: #{scaleValue(100)};
+            height: #{scaleValue(20)};
+
+            @media only screen and (max-width: 414px) {
+                width: #{scaleValue(500)};
+                height: #{scaleValue(300)};
+            }
+        }
+
+        &--trustcopy {
+            color: $deep-blue;
+
+            & p {
+                font-size: #{scaleValue(40)};
+                font-weight: 700;
+
+                @media only screen and (max-width: 414px) {
+                    font-size: #{scaleValue(140)};
+                }
+            }
+        }
+    }
+
+    .trust-section {
+        margin-bottom: #{scaleValue(40)};
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    .tp-star__canvas--half,
+    .tp-star__canvas {
+        fill: $star-green
+    }
+
+    .fouroutof5 {
+        @media only screen and (max-width: 414px) {
+           display: none;
+        }
+    }
+}

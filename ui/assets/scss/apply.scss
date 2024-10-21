@@ -1,0 +1,28 @@
+.apply {
+    position: relative;
+
+    &::before {
+        content: '';
+        background: rgba($font-black, .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: #{scaleValue(1000)};
+        z-index: 1;
+    }
+    
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__form {
+        width: #{scaleValue(700)};
+        background: $font-white;
+        padding: #{scaleValue(30)};
+        border-radius: 1rem;
+        z-index: 2;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+}

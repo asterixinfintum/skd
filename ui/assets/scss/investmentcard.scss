@@ -1,0 +1,121 @@
+.investmentcard {
+    position: relative;
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: #{scaleValue(40)};
+    }
+
+    &__logoarea {
+
+        & span {
+            background: rgba($primary-orange, .1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: #{scaleValue(50)};
+            width: #{scaleValue(50)};
+            border-radius: #{scaleValue(5)};
+        }
+
+        & svg {
+            height: #{scaleValue(17)};
+            width: #{scaleValue(17)};
+            fill: $star-green;
+        }
+    }
+
+    &__topright {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+
+        &--amountlabel {
+            font-size: #{scaleValue(12)};
+            font-weight: 600;
+            color: rgba($font-black, .3);
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(60)};
+            }
+        }
+
+        &--amountfigure {
+            color: $darker-blue;
+            font-weight: 700;
+            font-size: #{scaleValue(16)};
+            margin-bottom: #{scaleValue(10)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(60)};
+            }
+        }
+    }
+
+    &__bottom {
+        background: $deep-blue;
+        padding: #{scaleValue(20)};
+        margin-top: #{scaleValue(18)};
+        display: flex;
+        align-items: center;
+        color: $font-white;
+        cursor: pointer;
+
+        &--left {
+            font-size: #{scaleValue(13)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(50)};
+            }
+        }
+
+        &--right {
+            display: flex;
+            align-items: center;
+
+            & svg {
+                height: #{scaleValue(15)};
+                width: #{scaleValue(15)};
+                fill: $font-white;
+            }
+        }
+    }
+
+    &__detail {
+        margin-top: #{scaleValue(20)};
+
+        &--message {
+            color: rgba($font-black, .7);
+            font-weight: 500;
+            line-height: #{scaleValue(25)};
+            font-size: #{scaleValue(15)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(50)};
+            }
+        }
+
+        &--section {
+            margin-top: #{scaleValue(20)};
+            font-size: #{scaleValue(14)};
+            font-weight: 600;
+            color: rgba($font-black, .5);
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(50)};
+            }
+        }
+
+        &--value {
+            color: $darker-blue;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.footer {
+    background: $deep-blue;
+    color: $font-white;
+
+    &__header {
+        margin-bottom: #{scaleValue(20)};
+        padding: 0 #{scaleValue(80)};
+
+        & h4 {
+            font-size: #{scaleValue(40)};
+            transform: translateY(#{scaleValue(50)});
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(150)};
+                transform: translateY(#{scaleValue(250)});
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        padding: $section-padding;
+
+        @media only screen and (max-width: 414px) {
+            flex-direction: column;
+            padding:  #{scaleValue(330)} #{scaleValue(80)};
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin-right: #{scaleValue(60)};
+
+        &--link {
+            color: $font-white;
+            margin-right: #{scaleValue(20)};
+            margin-top: #{scaleValue(30)};
+
+            @media only screen and (max-width: 414px) {
+                margin-top: #{scaleValue(170)};
+            }
+
+            & a {
+                outline: none;
+                color: $font-white;
+                text-decoration: none;
+                font-size: #{scaleValue(17)};
+                cursor: pointer;
+                font-weight: 400;
+
+                @media only screen and (max-width: 414px) {
+                    font-size: #{scaleValue(100)};
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background: $darker-blue;
+        padding: $section-padding;
+        
+
+        @media only screen and (max-width: 414px) {
+            padding-bottom:  #{scaleValue(330)};
+        }
+
+        &--h3 {
+            font-size: #{scaleValue(20)};
+            margin-bottom: #{scaleValue(35)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(100)};
+                font-weight: 400;
+                margin-bottom: #{scaleValue(140)};
+            }
+        }
+
+        &--p {
+            font-size: #{scaleValue(20)};
+            line-height: #{scaleValue(30)};
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(90)};
+                line-height: #{scaleValue(100)};
+                font-weight: 400;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.header-label {
+    font-weight: 400;
+    font-size: #{scaleValue(20)};
+
+    @media only screen and (max-width: 768px) {
+        font-size: #{scaleValue(70)};
+    }
+
+    &-smaller {
+        font-size: #{scaleValue(16)};
+    }
+}
+
+.label {}
+
+.smlabel {
+    font-size: #{scaleValue(14)};
+    color: rgba($font-black, .4);
+    font-weight: 500;
+
+    @media only screen and (max-width: 768px) {
+        font-size: #{scaleValue(60)};
+    }
+}
+
+.tinylabel {
+    font-size: #{scaleValue(12)};
+    color: rgba($font-black, .4);
+    font-weight: 500;
+
+    @media only screen and (max-width: 768px) {
+        font-size: #{scaleValue(60)};
+    }
+}
+
+.normblack {
+    font-weight: 500;
+    font-size: #{scaleValue(14)};
+
+    @media only screen and (max-width: 768px) {
+        font-size: #{scaleValue(60)};
+    }
+}
+
+.normblack-two {
+    font-weight: 500;
+    font-size: #{scaleValue(16)};
+}
+
+.fontweight-3 {
+    font-weight: 300;
+}
+
+.fontweight-4 {
+    font-weight: 400;
+}
+
+.fontweight-5 {
+    font-weight: 500;
+}
+
+.fontweight-6 {
+    font-weight: 600;
+}
+
+.orange {
+    color: $primary-orange;
+}
+
+.white {
+    color: $font-white;
+}
+
+.black {
+    color: $font-black;
+}
+
+.small {
+    font-size: #{scaleValue(11)};
+}
+
+.fonterror {
+    color: $error-color;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}

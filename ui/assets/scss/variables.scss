@@ -1,0 +1,31 @@
+@function scaleValue($value) {
+    @return calc(
+        #{$value} * (clamp(350px, 100vw, 3840px) / var(--ideal-viewport-width))
+    );
+}
+
+$background: #f2f8f3;
+$primary-orange: #ff4b44;
+$error-color: red;
+$announcement-green: #bbf6e2;
+$font-white: #fff;
+$font-black: #191919;
+$deep-blue: #1a163b;
+$button-blue: #016b83;
+$darker-blue: #112231;
+$hover-text-color: #d9ff6f;
+$star-green: #73cf11;
+$yellow-border: .25rem solid #d9ff6f;
+$side-padding: #{scaleValue(80)};
+$transition: all .4s ease;
+$section-padding: #{scaleValue(80)} #{scaleValue(90)};
+$offer-green: #bbf6e2;
+$offer-pink: #ffd7f0;
+$offer-linear-one: linear-gradient(135deg,#ffe0f4,#f2fffe,#e8fbff);
+$offer-linear-two: linear-gradient(135deg,#d0fff4,#f5fffd,#dffff7);
+$border-radius: #{scaleValue(5)};
+$overview-padding: #{scaleValue(20)};
+$orange-border: .5px solid rgba($primary-orange, .2);
+$faint-black-border: 1px solid rgba($font-black, .08);
+$grey-background: #0000000d;
+$green-success: #28A745;

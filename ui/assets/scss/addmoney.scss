@@ -1,0 +1,38 @@
+.addmoney {
+
+    &__h3 {
+        font-size: #{scaleValue(15)};
+        font-weight: 500;
+        margin-bottom: #{scaleValue(20)};
+
+        @media only screen and (max-width: 414px) {
+            font-size: #{scaleValue(60)};
+        }
+    }
+
+    &__address {
+        color: $primary-orange;
+        font-size: #{scaleValue(13)};
+        font-weight: 500;
+        margin-bottom: #{scaleValue(20)};
+
+        @media only screen and (max-width: 414px) {
+            font-size: #{scaleValue(60)};
+        }
+    }
+
+    &__copy {
+
+        & button {
+            font-size: #{scaleValue(12)} !important;
+
+            @media only screen and (max-width: 414px) {
+                font-size: #{scaleValue(60)} !important;
+            }
+
+            &.buttonIsPulsing {
+                animation: pulse 0.1s;
+            }
+        }
+    }
+}

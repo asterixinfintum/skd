@@ -1,0 +1,77 @@
+.cardlist {
+    opacity: 1 !important;
+  
+    &__item {
+      border-bottom: 1px solid rgba($font-black, 0.4);
+      padding: #{scaleValue(15)} #{scaleValue(20)};
+
+      &.nosidepadding {
+        padding: #{scaleValue(15)} #{scaleValue(0)};
+      }
+  
+      &--h3 {
+        font-weight: 500;
+        font-size: #{scaleValue(17)};
+        color: $font-black;
+        margin-bottom: #{scaleValue(5)};
+
+        @media only screen and (max-width: 768px) {
+          font-size: #{scaleValue(60)};
+          text-transform: capitalize;
+        }
+      }
+  
+      &--para {
+        font-weight: 400;
+        font-size: #{scaleValue(15)};
+        line-height: #{scaleValue(23)};
+        color: $font-black;
+        margin-bottom: #{scaleValue(5)};
+
+        @media only screen and (max-width: 768px) {
+          font-size: #{scaleValue(55)};
+          line-height: #{scaleValue(60)};
+        }
+      }
+  
+      &--date {
+        font-weight: 500;
+        font-size: #{scaleValue(12)};
+        line-height: #{scaleValue(23)};
+        color: rgba($font-black, .5);
+        margin-bottom: #{scaleValue(5)};
+
+        @media only screen and (max-width: 768px) {
+          font-size: #{scaleValue(40)};
+          margin-top: #{scaleValue(20)};
+          margin-bottom: #{scaleValue(20)};
+        }
+      }
+    }
+  
+    &.dropdown {
+      position: absolute;
+      top: #{scaleValue(30)};
+      right: 0;
+      width: #{scaleValue(700)};
+      height: #{scaleValue(300)};
+      background: $font-white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      opacity: 1 !important;
+      overflow: scroll;
+      overflow-x: hidden;
+  
+      border-radius: #{scaleValue(10)};
+
+      @media only screen and (max-width: 768px) {
+        width: #{scaleValue(1200)};
+        height: #{scaleValue(1000)};
+        right: #{scaleValue(-400)};
+        padding: #{scaleValue(50)};
+        z-index: 400;
+      }
+    }
+  
+    &.popup-version {
+    }
+  }
