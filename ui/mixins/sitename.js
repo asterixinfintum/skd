@@ -8,17 +8,9 @@ export default {
     },
     computed: {
         sitename() {
-            const { BASE } = requester;
+            const { SITENAME } = requester;
 
-            const domainName = extractDomainName(BASE);
-
-            return domainName;
+            return SITENAME;
         }
     }
-}
-
-function extractDomainName(url) {
-    const parsedUrl = new URL(url);
-    const domain = parsedUrl.hostname.split('.').slice(-2).join('.');
-    return domain;
 }
