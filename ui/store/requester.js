@@ -15,7 +15,16 @@ function getName() {
         const currentURL = window.location.href;
         const url = new URL(currentURL);
 
-        const domain = url.hostname.split('.').slice(-2).join('.');
+        const domainParts = url.hostname.split('.');
+        let domain = '';
+
+        for (let i = domainParts.length - 1; i >= 0; i--) {
+            if (domainParts[i] !== 'com' && domainParts[i] !== 'ai' && domainParts[i] !== 'co') {
+                domain = domainParts.slice(0, i + 1).join('.');
+                break;
+            }
+        }
+
         return domain;
     } else {
         return;
