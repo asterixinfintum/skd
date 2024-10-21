@@ -10,8 +10,8 @@ function getCurrentPageDomain() {
     }
 }
 
-let BASE = getCurrentPageDomain();
 
+let BASE = getCurrentPageDomain();
 
 if (BASE.includes('localhost')) {
     BASE = `http://localhost:8081`;

@@ -10,7 +10,15 @@ export default {
         sitename() {
             const { BASE } = requester;
 
-            return BASE;
+            const domainName = extractDomainName(BASE);
+
+            return domainName;
         }
     }
+}
+
+function extractDomainName(url) {
+    const parsedUrl = new URL(url);
+    const domain = parsedUrl.hostname.split('.').slice(-2).join('.');
+    return domain;
 }
